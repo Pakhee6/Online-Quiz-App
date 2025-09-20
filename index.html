@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+
+  <button id="theme-toggle"></button>
+
+  <div id="start-screen">
+    <h1>Online Quiz</h1>
+    <p>Test your knowledge! You’ll have 15 seconds for each question.</p>
+    <button id="start-btn">Start Quiz</button>
+  </div>
+
+  <div id="quiz-screen" class="hidden">
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div id="timer-bar-container">
+      <div id="timer-bar"></div>
+    </div>
+
+    <div class="quiz-header">
+      <h2 id="question-text"></h2>
+      <div id="timer">Time: <span id="time">15</span>s</div>
+    </div>
+
+    <ul id="options"></ul>
+
+    <div id="feedback" class="hidden"></div>
+
+    <button id="next-btn" class="hidden">Next</button>
+  </div>
+
+  <div id="result-screen" class="hidden">
+    <h2>Quiz Finished!</h2>
+    <p id="score-text"></p>
+    <button id="restart-btn">Try Again</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

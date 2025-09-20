@@ -1,0 +1,135 @@
+:root {
+  --bg: linear-gradient(135deg, #6e8efb, #a777e3);
+  --card-bg: rgba(255, 255, 255, 0.15);
+  --card-text: white;
+  --button-bg: linear-gradient(135deg, #667eea, #764ba2);
+  --button-bg-hover: linear-gradient(135deg, #764ba2, #667eea);
+  --option-bg: rgba(255, 255, 255, 0.2);
+  --option-hover: rgba(255, 255, 255, 0.35);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.quiz-container {
+  background: var(--card-bg);
+  color: var(--card-text);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+  width: 420px;
+  text-align: center;
+  position: relative;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--card-text);
+}
+
+button {
+  background: var(--button-bg);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: var(--button-bg-hover);
+}
+
+#options {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#options li {
+  background: var(--option-bg);
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+#options li:hover {
+  background: var(--option-hover);
+}
+
+#feedback {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#feedback.correct {
+  background: rgba(0, 255, 0, 0.2);
+  color: green;
+}
+
+#feedback.wrong {
+  background: rgba(255, 0, 0, 0.2);
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+#progress-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12px;
+  margin-bottom: 15px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  transition: width 0.4s ease;
+}
+
+#timer-bar-container {
+  width: 100%;
+  background: rgba(255, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin: 10px 0 20px 0;
+}
+
+#timer-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff4d4d, #ff0000);
+  transition: width 1s linear;
+}
