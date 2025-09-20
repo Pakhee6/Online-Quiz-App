@@ -18,7 +18,7 @@ Next button navigation to move through questions
 
 Result screen showing total score
 
-Restart quiz option
+Try Again option
 
 Technologies Used
 
